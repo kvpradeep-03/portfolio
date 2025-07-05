@@ -5,6 +5,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
 import styled from '@emotion/styled';
 import { Box, IconButton } from '@mui/material';
+import { motion } from 'framer-motion'
 
 const Icons = styled(Box)({
     position: 'fixed',
@@ -37,8 +38,8 @@ const FloatingIcons = () => {
             //window.innerHeight is the height of the screen(viewport).
             //So window.innerHeight / 1.5 means "when the About section is near the middle of the screen.
             //If the top of the About section is less than halfway down the screen, we hide the FloatingIcons.jsx component)
-            const rect = about.getBoundingClientRect()  
-            setHideIcons(rect.top < window.innerHeight / 20) 
+            const rect = about.getBoundingClientRect()
+            setHideIcons(rect.top < window.innerHeight / 20)
         }
         //scroll is a built-in event provided by the DOM
         //This attaches an event listener to the browser's window object
@@ -47,16 +48,30 @@ const FloatingIcons = () => {
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
-      
+
 
     return (
-        <Icons className={`icons ${hideIcons ? 'hide' : 'show'}`}>
-            <IconButton sx={{ color: 'white', '&:hover': { color: '#00bcd4' }}}><GitHubIcon  sx={{ fontSize: '1.5vw' }} /></IconButton>
-            <IconButton sx={{ color: 'white', '&:hover': { color: '#00bcd4' } }}><LinkedInIcon sx={{ fontSize: '1.5vw' }} /></IconButton>
-            <IconButton sx={{ color: 'white', '&:hover': { color: '#00bcd4' } }}><ContactPageIcon sx={{ fontSize: '1.5vw' }} /></IconButton>
-            <IconButton sx={{ color: 'white', '&:hover': { color: '#00bcd4' } }}><InstagramIcon sx={{ fontSize: '1.5vw' }} /></IconButton>
-            <VerticalLine />         
-        </Icons>
+        <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+                duration: 1,
+                delay: 0.5,
+                ease: [0, 0.71, 0.2, 1.01],
+            }}
+
+        >
+            <Icons className={`icons ${hideIcons ? 'hide' : 'show'}`}>
+                <IconButton sx={{ color: 'white', '&:hover': { color: '#00bcd4' } }}><GitHubIcon sx={{ fontSize: '1.5vw' }} /></IconButton>
+                <IconButton sx={{ color: 'white', '&:hover': { color: '#00bcd4' } }}><LinkedInIcon sx={{ fontSize: '1.5vw' }} /></IconButton>
+                <IconButton sx={{ color: 'white', '&:hover': { color: '#00bcd4' } }}><ContactPageIcon sx={{ fontSize: '1.5vw' }} /></IconButton>
+                <IconButton sx={{ color: 'white', '&:hover': { color: '#00bcd4' } }}><InstagramIcon sx={{ fontSize: '1.5vw' }} /></IconButton>
+                <VerticalLine />
+            </Icons>
+        </motion.div>
+
+
+
     )
 }
 
