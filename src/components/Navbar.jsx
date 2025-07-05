@@ -1,5 +1,4 @@
 import React from 'react'
-import './Navbar.css'
 import { Box } from '@mui/material';
 import FlashOnIcon from '@mui/icons-material/FlashOn';
 import styled from '@emotion/styled';

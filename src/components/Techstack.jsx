@@ -19,13 +19,33 @@ import { FaLinux } from "react-icons/fa";
 import { SiApache } from "react-icons/si";
 import { SiAdminer } from "react-icons/si";
 import styled from '@emotion/styled';
+import * as motion from "motion/react-client";
 
 const Icon = styled(Box)({
+    display: 'flex',
+    flexDirection: 'column',
+    cursor: 'pointer',
     justifyContent: "center",
     alignItems: "center",
     textAlign: 'center',
-    fontSize: '48px'
+    fontSize: '48px',
+    '& .icon-label': {
+        opacity: 0,
+        transition: 'opacity 0.2s',
+        fontSize: '0.65rem',
+        fontFamily: 'Inter',
+        fontWeight: 100,
+        color: '#fff',
+        marginTop: '8px',
+        alignItems: "center",
+        textAlign: 'center',
+    },
+    '&:hover .icon-label': {
+        opacity: 1,
+    },
+
 })
+
 
 
 const Techstack = () => {
@@ -39,108 +59,391 @@ const Techstack = () => {
                     Technologies I Work With
                 </Typography>
             </Box>
-            <Box sx={{ display: 'flex', flexGrow: 1, justifyContent: 'center', }}>
-                <Grid container spacing={3} justifyContent="center" alignItems="center" sx={{ mb: '50vw' }}>
+            <Box id="icons-container" sx={{ display: 'flex', flexGrow: 1, justifyContent: 'center', }}>
+                <Grid container spacing={3} justifyContent="center" alignItems="center">
                     <Grid size={2}>
-                        <Icon>
-                            <FaHtml5 />
-                        </Icon>
+                        <motion.div
+                            whileHover={{
+                                scale: [null, 1.1, 1.6],
+                                transition: {
+                                    duration: 0.5,
+                                    times: [0, 0.6, 1],
+                                    ease: ["easeInOut", "easeOut"],
+                                },
+                            }}
+                            transition={{
+                                duration: 0.3,
+                                ease: "easeOut",
+                            }}
+                        >
+                            <Icon>
+                                <FaHtml5 />
+                                <span className="icon-label">HTML</span>
+                            </Icon>
+
+                        </motion.div>
 
                     </Grid>
                     <Grid size={2}>
-                        <Icon>
-                            <IoLogoCss3 style={{ fontSize: '48px' }} />
-                        </Icon>
+                        <motion.div
+                            whileHover={{
+                                scale: [null, 1.1, 1.6],
+                                transition: {
+                                    duration: 0.5,
+                                    times: [0, 0.6, 1],
+                                    ease: ["easeInOut", "easeOut"],
+                                },
+                            }}
+                            transition={{
+                                duration: 0.3,
+                                ease: "easeOut",
+                            }}
+                        >
+                            <Icon>
+                                <IoLogoCss3 style={{ fontSize: '48px' }} />
+                                <span className="icon-label">CSS</span>
+                            </Icon>
+                        </motion.div>
 
                     </Grid>
                     <Grid size={2}>
-                        <Icon>
-                            <FaBootstrap style={{ fontSize: '48px' }} />
-                        </Icon>
+                        <motion.div
+                            whileHover={{
+                                scale: [null, 1.1, 1.6],
+                                transition: {
+                                    duration: 0.5,
+                                    times: [0, 0.6, 1],
+                                    ease: ["easeInOut", "easeOut"],
+                                },
+                            }}
+                            transition={{
+                                duration: 0.3,
+                                ease: "easeOut",
+                            }}
+                        >
+                            <Icon>
+                                <FaBootstrap style={{ fontSize: '48px' }} />
+                                <span className="icon-label">Bootstrap</span>
+                            </Icon>
+                        </motion.div>
+                    </Grid>
+                    <Grid size={2}>
+                        <motion.div
+                            whileHover={{
+                                scale: [null, 1.1, 1.6],
 
+                                transition: {
+                                    duration: 0.5,
+                                    times: [0, 0.6, 1],
+                                    ease: ["easeInOut", "easeOut"],
+                                },
+                            }}
+                            transition={{
+                                duration: 0.3,
+                                ease: "easeOut",
+                            }}
+                        >
+                            <Icon>
+                                <FaJs style={{ fontSize: '48px' }} />
+                                <span className="icon-label">Javascript</span>
+                            </Icon>
+                        </motion.div>
                     </Grid>
                     <Grid size={2}>
-                        <Icon>
-                            <FaJs style={{ fontSize: '48px' }} />
-                        </Icon>
+                        <motion.div
+                            whileHover={{
+                                scale: [null, 1.1, 1.6],
 
+                                transition: {
+                                    duration: 0.5,
+                                    times: [0, 0.6, 1],
+                                    ease: ["easeInOut", "easeOut"],
+                                },
+                            }}
+                            transition={{
+                                duration: 0.3,
+                                ease: "easeOut",
+                            }}
+                        >
+                            <Icon>
+                                <FaReact style={{ fontSize: '48px' }} />
+                                <span className="icon-label">ReactJS</span>
+                            </Icon>
+                        </motion.div>
                     </Grid>
                     <Grid size={2}>
-                        <Icon>
-                            <FaReact style={{ fontSize: '48px' }} />
-                        </Icon>
+                        <motion.div
+                            whileHover={{
+                                scale: [null, 1.1, 1.6],
 
+                                transition: {
+                                    duration: 0.5,
+                                    times: [0, 0.6, 1],
+                                    ease: ["easeInOut", "easeOut"],
+                                },
+                            }}
+                            transition={{
+                                duration: 0.3,
+                                ease: "easeOut",
+                            }}
+                        >
+                            <Icon>
+                                <SiMui style={{ fontSize: '48px' }} />
+                                <span className="icon-label">Material UI</span>
+                            </Icon>
+                        </motion.div>
                     </Grid>
                     <Grid size={2}>
-                        <Icon>
-                            <SiMui style={{ fontSize: '48px' }} />
-                        </Icon>
-
+                        <motion.div
+                            whileHover={{
+                                scale: [null, 1.1, 1.6],
+                                transition: {
+                                    duration: 0.5,
+                                    times: [0, 0.6, 1],
+                                    ease: ["easeInOut", "easeOut"],
+                                },
+                            }}
+                            transition={{
+                                duration: 0.3,
+                                ease: "easeOut",
+                            }}
+                        >
+                            <Icon>
+                                <FaPython style={{ fontSize: '48px' }} />
+                                <span className="icon-label">Python</span>
+                            </Icon>
+                        </motion.div>
                     </Grid>
                     <Grid size={2}>
-                        <Icon>
-                            <FaPython style={{ fontSize: '48px' }} />
-                        </Icon>
+                        <motion.div
+                            whileHover={{
+                                scale: [null, 1.1, 1.6],
+                                transition: {
+                                    duration: 0.5,
+                                    times: [0, 0.6, 1],
+                                    ease: ["easeInOut", "easeOut"],
+                                },
+                            }}
+                            transition={{
+                                duration: 0.3,
+                                ease: "easeOut",
+                            }}
+                        >
+                            <Icon>
+                                <DiDjango style={{ fontSize: '48px' }} />
+                                <span className="icon-label">Django</span>
+                            </Icon>
+                        </motion.div>
                     </Grid>
                     <Grid size={2}>
-                        <Icon>
-                            <DiDjango style={{ fontSize: '48px' }} />
-                        </Icon>
+                        <motion.div
+                            whileHover={{
+                                scale: [null, 1.1, 1.6],
+                                transition: {
+                                    duration: 0.5,
+                                    times: [0, 0.6, 1],
+                                    ease: ["easeInOut", "easeOut"],
+                                },
+                            }}
+                            transition={{
+                                duration: 0.3,
+                                ease: "easeOut",
+                            }}
+                        >
+                            <Icon>
+                                <SiPostman style={{ fontSize: '48px' }} />
+                                <span className="icon-label">Postman</span>
+                            </Icon>
+                        </motion.div>
                     </Grid>
                     <Grid size={2}>
-                        <Icon>
-                            <SiPostman style={{ fontSize: '48px' }} />
-                        </Icon>
+                        <motion.div
+                            whileHover={{
+                                scale: [null, 1.1, 1.6],
+                                transition: {
+                                    duration: 0.5,
+                                    times: [0, 0.6, 1],
+                                    ease: ["easeInOut", "easeOut"],
+                                },
+                            }}
+                            transition={{
+                                duration: 0.3,
+                                ease: "easeOut",
+                            }}
+                        >
+                            <Icon>
+                                <FaDocker style={{ fontSize: '48px' }} />
+                                <span className="icon-label">Docker</span>
+                            </Icon>
+                        </motion.div>
                     </Grid>
                     <Grid size={2}>
-                        <Icon>
-                            <FaDocker style={{ fontSize: '48px' }} />
-                        </Icon>
-
+                        <motion.div
+                            whileHover={{
+                                scale: [null, 1.1, 1.6],
+                                transition: {
+                                    duration: 0.5,
+                                    times: [0, 0.6, 1],
+                                    ease: ["easeInOut", "easeOut"],
+                                },
+                            }}
+                            transition={{
+                                duration: 0.3,
+                                ease: "easeOut",
+                            }}
+                        >
+                            <Icon>
+                                <FaGithub style={{ fontSize: '48px' }} />
+                                <span className="icon-label">Github</span>
+                            </Icon>
+                        </motion.div>
                     </Grid>
                     <Grid size={2}>
-                        <Icon>
-                            <FaGithub style={{ fontSize: '48px' }} />
-                        </Icon>
-
+                        <motion.div
+                            whileHover={{
+                                scale: [null, 1.1, 1.6],
+                                transition: {
+                                    duration: 0.5,
+                                    times: [0, 0.6, 1],
+                                    ease: ["easeInOut", "easeOut"],
+                                },
+                            }}
+                            transition={{
+                                duration: 0.3,
+                                ease: "easeOut",
+                            }}
+                        >
+                            <Icon>
+                                <FaGitAlt style={{ fontSize: '48px' }} />
+                                <span className="icon-label">Git</span>
+                            </Icon>
+                        </motion.div>
                     </Grid>
                     <Grid size={2}>
-                        <Icon>
-                            <FaGitAlt style={{ fontSize: '48px' }} />
-                        </Icon>
-
+                        <motion.div
+                            whileHover={{
+                                scale: [null, 1.1, 1.6],
+                                transition: {
+                                    duration: 0.5,
+                                    times: [0, 0.6, 1],
+                                    ease: ["easeInOut", "easeOut"],
+                                },
+                            }}
+                            transition={{
+                                duration: 0.3,
+                                ease: "easeOut",
+                            }}
+                        >
+                            <Icon>
+                                <VscVscode style={{ fontSize: '48px' }} />
+                                <span className="icon-label">Vscode</span>
+                            </Icon>
+                        </motion.div>
                     </Grid>
                     <Grid size={2}>
-                        <Icon>
-                            <VscVscode style={{ fontSize: '48px' }} />
-                        </Icon>
-
+                        <motion.div
+                            whileHover={{
+                                scale: [null, 1.1, 1.6],
+                                transition: {
+                                    duration: 0.5,
+                                    times: [0, 0.6, 1],
+                                    ease: ["easeInOut", "easeOut"],
+                                },
+                            }}
+                            transition={{
+                                duration: 0.3,
+                                ease: "easeOut",
+                            }}
+                        >
+                            <Icon>
+                                <RiPhpFill style={{ fontSize: '48px' }} />
+                                <span className="icon-label">Php</span>
+                            </Icon>
+                        </motion.div>
                     </Grid>
                     <Grid size={2}>
-                        <Icon>
-                            <RiPhpFill style={{ fontSize: '48px' }} />
-                        </Icon>
-
+                        <motion.div
+                            whileHover={{
+                                scale: [null, 1.1, 1.6],
+                                transition: {
+                                    duration: 0.5,
+                                    times: [0, 0.6, 1],
+                                    ease: ["easeInOut", "easeOut"],
+                                },
+                            }}
+                            transition={{
+                                duration: 0.3,
+                                ease: "easeOut",
+                            }}
+                        >
+                            <Icon>
+                                <SiMysql style={{ fontSize: '48px' }} />
+                                <span className="icon-label">MySql</span>
+                            </Icon>
+                        </motion.div>
                     </Grid>
                     <Grid size={2}>
-                        <Icon>
-                            <SiMysql style={{ fontSize: '48px' }} />
-                        </Icon>
+                        <motion.div
+                            whileHover={{
+                                scale: [null, 1.1, 1.6],
+                                transition: {
+                                    duration: 0.5,
+                                    times: [0, 0.6, 1],
+                                    ease: ["easeInOut", "easeOut"],
+                                },
+                            }}
+                            transition={{
+                                duration: 0.3,
+                                ease: "easeOut",
+                            }}
+                        >
+                            <Icon>
+                                <FaLinux style={{ fontSize: '48px' }} />
+                                <span className="icon-label">Linux</span>
+                            </Icon>
+                        </motion.div>
                     </Grid>
                     <Grid size={2}>
-                        <Icon>
-                            <FaLinux style={{ fontSize: '48px' }} />
-                        </Icon>
+                        <motion.div
+                            whileHover={{
+                                scale: [null, 1.1, 1.6],
+                                transition: {
+                                    duration: 0.5,
+                                    times: [0, 0.6, 1],
+                                    ease: ["easeInOut", "easeOut"],
+                                },
+                            }}
+                            transition={{
+                                duration: 0.3,
+                                ease: "easeOut",
+                            }}
+                        >
+                            <Icon>
+                                <SiApache style={{ fontSize: '48px' }} />
+                                <span className="icon-label">Apache</span>
+                            </Icon>
+                        </motion.div>
                     </Grid>
                     <Grid size={2}>
-                        <Icon>
-                            <SiApache style={{ fontSize: '48px' }} />
-                        </Icon>
-                    </Grid>
-                    <Grid size={2}>
-                        <Icon>
-                            <SiAdminer style={{ fontSize: '48px' }} />
-                        </Icon>
+                        <motion.div
+                            whileHover={{
+                                scale: [null, 1.1, 1.6],
+                                transition: {
+                                    duration: 0.5,
+                                    times: [0, 0.6, 1],
+                                    ease: ["easeInOut", "easeOut"],
+                                },
+                            }}
+                            transition={{
+                                duration: 0.3,
+                                ease: "easeOut",
+                            }}
+                        >
+                            <Icon>
+                                <SiAdminer style={{ fontSize: '48px' }} />
+                                <span className="icon-label">Adminer</span>
+                            </Icon>
+                        </motion.div>
                     </Grid>
                 </Grid>
             </Box>

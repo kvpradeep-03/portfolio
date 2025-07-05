@@ -6,6 +6,7 @@ import { Margin } from '@mui/icons-material'
 import About from './components/About'
 import { Box } from '@mui/material'
 import Techstack from './components/Techstack'
+import Projects from './components/Projects'
  
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Hero />
       <About />
       <Techstack/>
+      <Projects/>
       <FloatingIcons />
     </Box>
   )

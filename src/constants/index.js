@@ -1,7 +1,9 @@
-import project1 from "../assets/projects/project-1.jpg";
-import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
-import project4 from "../assets/projects/project-4.jpg";
+import eatoImg from '../assets/projects/eato.png';
+import pixvaltImg from '../assets/projects/pixvalt.png';
+import movieshubImg from '../assets/projects/movieshub.png';
+import fusioncartImg from '../assets/projects/fusioncart.png';
+import usermanagementapiImg from '../assets/projects/usermanagementapi.png';
+
 
 export const HERO_CONTENT = `I architect scalable backends and engineer responsive frontends, optimizing every layer of the stack.`;
 
@@ -10,37 +12,49 @@ export const ABOUT_TEXT = `I'm a full-stack web developer with experience in bot
 
 export const PROJECTS = [
   {
-    title: "E-Commerce Website",
-    image: project1,
+    title: "Eato",
+    image: eatoImg,
+    type: 'frontend',
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+      "Eato is a front-end food delivery app with category browsing, sorting, top picks, cart, and a smooth checkout experience.",
+    technologies: ["HTML", "CSS", "React", "Material UI"],
   },
   {
-    title: "Task Management App",
-    image: project2,
+    title: "PixValt",
+    image: pixvaltImg,
+    type: 'frontend',
     description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
+      "Pixvalt is a front-end social media app with a simple and modern UI. It features a clean layout that mimics the core design of popular social platforms.",
+    technologies: ["HTML", "CSS", "React", "Material UI"],
   },
   {
-    title: "Portfolio Website",
-    image: project3,
+    title: "MoviesHub",
+    image: movieshubImg,
+    type: 'frontend',
     description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
+      "Movieshub is a movie listing web app that fetches real-time data using the TMDB API.",
+    technologies: ["HTML", "CSS", "React", "Material UI", "OpenTDB API"],
   },
   {
-    title: "Blogging Platform",
-    image: project4,
+    title: "FusionCart",
+    image: fusioncartImg,
+    type: 'frontend',
     description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
+      "FusionCart is a front-end e-commerce web app featuring product listings, cart functionality with browser local storage, and a smooth checkout flow",
+    technologies: ["HTML", "CSS","Bootstrap", "Javascript"],
+  },
+  {
+    title: "User-Management Api",
+    image: usermanagementapiImg,
+    type: 'API',
+    description:
+      "FusionCart is a front-end e-commerce web app featuring product listings, cart functionality with browser local storage, and a smooth checkout flow",
+    technologies: ["Php", "Postman", " RESTful API"],
   },
 ];
 
 export const CONTACT = {
-  address: "767 Fifth Avenue, New York, NY 10153 ",
-  phoneNo: "+12 4555 666 00 ",
-  email: "me@example.com",
+  Location: "Chennai, Tamil Nadu, India",
+  phoneNo: "+91 6383464530",
+  email: "kvpradeep60@gmail.com",
 };
