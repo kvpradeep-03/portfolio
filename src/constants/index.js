@@ -54,7 +54,7 @@ export const PROJECTS = [
   {
     title: "User-Management Api",
     image: usermanagementapiImg,
-    type: 'API',
+    type: 'api',
     git: "https://github.com/kvpradeep-03/user-management-API",
     live: "https://github.com/kvpradeep-03/user-management-API/wiki/user%E2%80%90management-API-Docs",
     description:
@@ -68,3 +68,4 @@ export const CONTACT = {
   phoneNo: "+91 6383464530",
   email: "kvpradeep60@gmail.com",
 };
+

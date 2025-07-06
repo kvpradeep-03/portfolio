@@ -7,6 +7,7 @@ import About from './components/About'
 import { Box } from '@mui/material'
 import Techstack from './components/Techstack'
 import Projects from './components/Projects'
+import Contact from './components/Contact'
  
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <About />
       <Techstack/>
       <Projects/>
+      <Contact/>
       <FloatingIcons />
     </Box>
   )

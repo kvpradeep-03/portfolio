@@ -20,6 +20,7 @@ import { SiApache } from "react-icons/si";
 import { SiAdminer } from "react-icons/si";
 import styled from '@emotion/styled';
 import * as motion from "motion/react-client";
+import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
 
 const Icon = styled(Box)({
     display: 'flex',
@@ -51,13 +52,20 @@ const Icon = styled(Box)({
 const Techstack = () => {
     return (
         <div>
-            <Box sx={{ display: 'flex', justifyContent: 'center', mt: '15vw' }}>
-                <Typography component="div" variant='h1' sx={{
-                    mb: '6rem',
-                    fontSize: '2.25rem', fontFamily: 'Inter, sans-serif'
-                }}>
-                    Technologies I Work With
-                </Typography>
+            <Box sx={{ display: 'flex', justifyContent: 'center', mt: '15vw', mb: '6rem', }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <Typography
+                        component="div"
+                        variant="h1"
+                        sx={{
+                            fontSize: '2.25rem',
+                            fontFamily: 'Inter, sans-serif',
+                        }}
+                    >
+                        Technologies I Work With
+                    </Typography>
+                    <TipsAndUpdatesIcon fontSize="large"sx={{ml:2}} />
+                </Box>
             </Box>
             <Box id="icons-container" sx={{ display: 'flex', flexGrow: 1, justifyContent: 'center', }}>
                 <Grid container spacing={3} justifyContent="center" alignItems="center">
