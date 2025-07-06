@@ -9,7 +9,9 @@ import Typography from '@mui/material/Typography'
 import { PROJECTS } from '../constants/index.js'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import styled from '@emotion/styled'
 
+ 
 const Projects = () => {
     return (
         <Box>
@@ -82,7 +84,7 @@ const Projects = () => {
                                         fontFamily: 'Inter, sans-serif',
                                         color: 'white',
                                         '&:hover': { color: '#00bcd4' }
-                                    }}><GitHubIcon sx={{ fontSize: '1.2vw', mr: '0.25vw' }} /> GitHub Repo
+                                    }}><GitHubIcon sx={{ fontSize: '1.2vw', mr: '0.25vw' }} /> <a href={project.git} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'white',}} >GitHub Repo</a>
                                 </IconButton>
                                     <IconButton sx={{
                                         fontSize: '1rem',
@@ -90,7 +92,7 @@ const Projects = () => {
                                         fontFamily: 'Inter, sans-serif',
                                         color: 'white',
                                         '&:hover': { color: '#00bcd4' }
-                                    }}><OpenInNewIcon sx={{ fontSize: '1.2vw', mr: '0.25vw' }} /> Live
+                                    }}><OpenInNewIcon sx={{ fontSize: '1.2vw', mr: '0.25vw' }} /> <a href={project.live} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'white', }} >Live</a>
                                     </IconButton>
                                 </CardActions>
                             </Card>

@@ -62,10 +62,40 @@ const FloatingIcons = () => {
 
         >
             <Icons className={`icons ${hideIcons ? 'hide' : 'show'}`}>
-                <IconButton sx={{ color: 'white', '&:hover': { color: '#00bcd4' } }}><GitHubIcon sx={{ fontSize: '1.5vw' }} /></IconButton>
-                <IconButton sx={{ color: 'white', '&:hover': { color: '#00bcd4' } }}><LinkedInIcon sx={{ fontSize: '1.5vw' }} /></IconButton>
-                <IconButton sx={{ color: 'white', '&:hover': { color: '#00bcd4' } }}><ContactPageIcon sx={{ fontSize: '1.5vw' }} /></IconButton>
-                <IconButton sx={{ color: 'white', '&:hover': { color: '#00bcd4' } }}><InstagramIcon sx={{ fontSize: '1.5vw' }} /></IconButton>
+                <a
+                    href="https://github.com/kvpradeep-03"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ textDecoration: 'none' }}
+                >
+                    <IconButton sx={{ color: 'white', '&:hover': { color: '#00bcd4' } }}>
+                        <GitHubIcon sx={{ fontSize: '1.5vw' }} />
+                    </IconButton>
+                </a>
+                <a
+                    href="https://www.linkedin.com/in/pradeep60/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ textDecoration: 'none' }}
+                >
+                    <IconButton sx={{ color: 'white', '&:hover': { color: '#00bcd4' } }}><LinkedInIcon sx={{ fontSize: '1.5vw' }} /></IconButton>
+                </a>
+                <a
+                    href="../assets/Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ textDecoration: 'none' }}
+                >
+                    <IconButton sx={{ color: 'white', '&:hover': { color: '#00bcd4' } }}><ContactPageIcon sx={{ fontSize: '1.5vw' }} /></IconButton>
+                </a>
+                <a
+                     
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ textDecoration: 'none' }}
+                >
+                    <IconButton sx={{ color: 'white', '&:hover': { color: '#00bcd4' } }}><InstagramIcon sx={{ fontSize: '1.5vw' }} /></IconButton>
+                </a> 
                 <VerticalLine />
             </Icons>
         </motion.div>

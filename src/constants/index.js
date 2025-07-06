@@ -15,6 +15,8 @@ export const PROJECTS = [
     title: "Eato",
     image: eatoImg,
     type: 'frontend',
+    git: "https://github.com/kvpradeep-03/Eato",
+    live: "https://eatoapp.netlify.app/",
     description:
       "Eato is a front-end food delivery app with category browsing, sorting, top picks, cart, and a smooth checkout experience.",
     technologies: ["HTML", "CSS", "React", "Material UI"],
@@ -23,6 +25,8 @@ export const PROJECTS = [
     title: "PixValt",
     image: pixvaltImg,
     type: 'frontend',
+    git: "https://github.com/kvpradeep-03/PixValt",
+    live: "https://pixvaltapp.netlify.app/",
     description:
       "Pixvalt is a front-end social media app with a simple and modern UI. It features a clean layout that mimics the core design of popular social platforms.",
     technologies: ["HTML", "CSS", "React", "Material UI"],
@@ -31,14 +35,18 @@ export const PROJECTS = [
     title: "MoviesHub",
     image: movieshubImg,
     type: 'frontend',
+    git: "https://github.com/kvpradeep-03/MoviesHub",
+    live: "https://appmovieshub.netlify.app/",
     description:
-      "Movieshub is a movie listing web app that fetches real-time data using the TMDB API.",
+      "Movieshub is a movie listing web app that fetches real-time data using the TMDB API.\nNOTE: `Use Chrome For better compatability`",
     technologies: ["HTML", "CSS", "React", "Material UI", "OpenTDB API"],
   },
   {
     title: "FusionCart",
     image: fusioncartImg,
     type: 'frontend',
+    git: "https://github.com/kvpradeep-03/E-COMMERCE-webpage",
+    live: "https://fusioncart.netlify.app/",
     description:
       "FusionCart is a front-end e-commerce web app featuring product listings, cart functionality with browser local storage, and a smooth checkout flow",
     technologies: ["HTML", "CSS","Bootstrap", "Javascript"],
@@ -47,6 +55,8 @@ export const PROJECTS = [
     title: "User-Management Api",
     image: usermanagementapiImg,
     type: 'API',
+    git: "https://github.com/kvpradeep-03/user-management-API",
+    live: "https://github.com/kvpradeep-03/user-management-API/wiki/user%E2%80%90management-API-Docs",
     description:
       "FusionCart is a front-end e-commerce web app featuring product listings, cart functionality with browser local storage, and a smooth checkout flow",
     technologies: ["Php", "Postman", " RESTful API"],
