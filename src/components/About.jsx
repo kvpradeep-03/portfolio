@@ -45,7 +45,8 @@ const About = () => {
     })
   }, [])
   return (
-    <div id='about' ref={containerRef} style={{ padding: '20px 50px', margin: '40px auto', width: '80vw' }}>
+    <div id='about' ref={containerRef} style={{
+      padding: '20px 50px', margin: '40px auto', width: '80vw', scrollMarginTop: '100px' }}>
       <Card sx={{ display: 'flex', justifyContent: 'center', bgcolor: 'inherit', color: 'inherit' }}>
         <Box sx={{ display: 'flex', flexDirection: 'column', marginTop: '0px', alignItems: 'center' }}>
           <CardContent sx={{ flex: '1 0 auto', padding: '100px 100px 50px 60px' }}>

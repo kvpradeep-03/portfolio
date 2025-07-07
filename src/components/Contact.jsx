@@ -25,7 +25,7 @@ const Contact = () => {
     { icon: <TrendingUpIcon sx={{ mr: 1, color: 'white', '&:hover': { color: '#00bcd4' } }} />, text: "Always Improving: I treat every opportunity as a chance to grow not just as a developer, but as a communicator, thinker, and contributor to your business goals." },
   ];
   return (
-    <Box>
+    <Box id="contact" sx={{ scrollMarginTop: '110px' }}>
       <Box sx={{ display: 'flex', justifyContent: 'center', mt: '8vw' }}>
         <Typography component="div" variant='h1' sx={{
           mb: '2rem',

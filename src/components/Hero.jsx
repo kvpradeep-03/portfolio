@@ -14,6 +14,9 @@ const Greet = styled(Box)({
     textAlign: 'center',
     padding: '0 1rem',
     marginBottom: '10px',
+    xs:{
+        marginTop: '30px'
+    }
 })
 
 const Hero = () => {
@@ -27,7 +30,7 @@ const Hero = () => {
             ease: [0, 0.71, 0.2, 1.01],
         }}
         >
-            <Greet>
+            <Greet id='home'>
                 <Typography
                     sx={{ fontSize: '3.75rem', fontWeight: 100, fontFamily: 'Inter, sans-serif' }}
                 >
