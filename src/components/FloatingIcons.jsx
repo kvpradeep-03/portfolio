@@ -18,16 +18,22 @@ const Icons = styled(Box)({
     alignItems: 'center'
 });
 
-const VerticalLine = styled('div')({
+const VerticalLine = styled('div')(({ theme }) => ({
     width: '1px',
-    height: '4vw', // Adjust as needed
-    backgroundColor: '#ffffff66', // semi-transparent white
+    height: '4vw', // default for sm and up
+    backgroundColor: '#ffffff66',
     marginTop: '8px',
-    left: '100px'
-});
+    left: '100px',
+
+    // responsive height for xs (mobile)
+    [theme.breakpoints.down('sm')]: {
+        height: '16vw',
+    },
+}));
 
 const FloatingIcons = () => {
 
+    //TODO: Fix this auto hide when it passes about it should hide  in mobile view 
     const [hideIcons, setHideIcons] = useState(false)
     useEffect(() => {
         const about = document.getElementById('about')
@@ -69,7 +75,7 @@ const FloatingIcons = () => {
                     style={{ textDecoration: 'none' }}
                 >
                     <IconButton sx={{ color: 'white', '&:hover': { color: '#00bcd4' } }}>
-                        <GitHubIcon sx={{ fontSize: '1.5vw' }} />
+                        <GitHubIcon sx={{ fontSize: {xs:'5.5vw', sm:'1.5vw'} }} />
                     </IconButton>
                 </a>
                 <a
@@ -78,7 +84,7 @@ const FloatingIcons = () => {
                     rel="noopener noreferrer"
                     style={{ textDecoration: 'none' }}
                 >
-                    <IconButton sx={{ color: 'white', '&:hover': { color: '#00bcd4' } }}><LinkedInIcon sx={{ fontSize: '1.5vw' }} /></IconButton>
+                    <IconButton sx={{ color: 'white', '&:hover': { color: '#00bcd4' } }}><LinkedInIcon sx={{ fontSize: {xs:'5.5vw', sm:'1.5vw'} }} /></IconButton>
                 </a>
                 <a
                     href="../assets/Resume.pdf"
@@ -86,7 +92,7 @@ const FloatingIcons = () => {
                     rel="noopener noreferrer"
                     style={{ textDecoration: 'none' }}
                 >
-                    <IconButton sx={{ color: 'white', '&:hover': { color: '#00bcd4' } }}><ContactPageIcon sx={{ fontSize: '1.5vw' }} /></IconButton>
+                    <IconButton sx={{ color: 'white', '&:hover': { color: '#00bcd4' } }}><ContactPageIcon sx={{ fontSize: {xs:'5.5vw', sm:'1.5vw'} }} /></IconButton>
                 </a>
                 <a
                      
@@ -94,7 +100,7 @@ const FloatingIcons = () => {
                     rel="noopener noreferrer"
                     style={{ textDecoration: 'none' }}
                 >
-                    <IconButton sx={{ color: 'white', '&:hover': { color: '#00bcd4' } }}><InstagramIcon sx={{ fontSize: '1.5vw' }} /></IconButton>
+                    <IconButton sx={{ color: 'white', '&:hover': { color: '#00bcd4' } }}><InstagramIcon sx={{ fontSize: {xs:'5.5vw', sm:'1.5vw'} }} /></IconButton>
                 </a> 
                 <VerticalLine />
             </Icons>

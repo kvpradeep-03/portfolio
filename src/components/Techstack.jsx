@@ -53,22 +53,19 @@ const Techstack = () => {
     return (
  
         <Box id="skill" sx={{ scrollMarginTop: '200px' }}>
-                <Box sx={{ display: 'flex', justifyContent: 'center', mt: '15vw', mb: '6rem', }}>
+            <Box sx={{ display: 'flex', justifyContent: 'space-around', mt: '15vw', mb: { xs: '4rem', sm: '6rem' }, }}>
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                         <Typography
                             component="div"
                             variant="h1"
-                            sx={{
-                                fontSize: '2.25rem',
-                                fontFamily: 'Inter, sans-serif',
-                            }}
+                        sx={{ fontSize: { xs: '1.75rem', sm: '3.75rem' }, fontWeight: { xs: 300, sm: 100 }, fontFamily: 'Inter, sans-serif' }}
                         >
                             Technologies I Work With
                         </Typography>
-                        <TipsAndUpdatesIcon fontSize="large" sx={{ ml: 2 }} />
+                        <TipsAndUpdatesIcon fontSize="large" sx={{ ml: {xs:1, sm:2}}} />
                     </Box>
                 </Box>
-                <Box id="icons-container" sx={{ display: 'flex', flexGrow: 1, justifyContent: 'center', }}>
+                <Box id="icons-container" sx={{ display: 'flex', flexGrow: 1, justifyContent: 'center', p:2 }}>
                     <Grid container spacing={3} justifyContent="center" alignItems="center">
                         <Grid size={2}>
                             <motion.div

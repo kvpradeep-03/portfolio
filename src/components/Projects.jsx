@@ -25,10 +25,7 @@ const Projects = () => {
                         <Typography
                             component="div"
                             variant="h1"
-                            sx={{
-                                fontSize: '2.25rem',
-                                fontFamily: 'Inter, sans-serif',
-                            }}
+                            sx={{ fontSize: { xs: '1.75rem', sm: '3.75rem' }, fontWeight: { xs: 300, sm: 100 }, fontFamily: 'Inter, sans-serif' }}
                         >
                             Things I've Built
                         </Typography>
@@ -47,68 +44,72 @@ const Projects = () => {
                         },
                     }}
                 >
-                    <ButtonGroup variant="outlined" color='white' aria-label="Basic button group">
-                        <Button
-                            sx={{
-                                color: 'white',
-                                fontSize: '1.50rem',
-                                fontWeight: '100',
-                                fontFamily: 'Inter, sans-serif',
-                                borderRadius: '10px'
-                            }}
-                            onClick={() => setType('all')}
-                        >
-                            All
-                        </Button>
-                        <Button
-                            sx={{
-                                color: 'white',
-                                fontSize: '1.50rem',
-                                fontWeight: '100',
-                                fontFamily: 'Inter, sans-serif',
-                            }}
-                            onClick={() => setType('frontend')}
-                        >
-                            FrontEnd
-                        </Button>
-                        <Button
-                            sx={{
-                                color: 'white',
-                                fontSize: '1.50rem',
-                                fontWeight: '100',
-                                fontFamily: 'Inter, sans-serif',
-                            }}
-                            onClick={() => setType('fullstack')}
-                        >
-                            FullStack
-                        </Button>
-                        <Button
-                            sx={{
-                                color: 'white',
-                                fontSize: '1.50rem',
-                                fontWeight: '100',
-                                fontFamily: 'Inter, sans-serif',
-                                borderRadius: '10px'
-                            }}
-                            onClick={() => setType('api')}
-                        >
-                            Api
-                        </Button>
+                    <ButtonGroup
+                        variant="outlined"
+                        color="white"
+                        aria-label="Basic button group"
+                        sx={{
+                            width: { xs: '90%', sm: 'auto' }, // full width on small screens
+                            justifyContent: 'center',
+                        }}
+                    >
+                        {['All', 'FrontEnd', 'FullStack', 'API'].map((label) => (
+                            <Button
+                                key={label}
+                                onClick={() => setType(label.toLowerCase())}
+                                sx={{
+                                    minWidth: '90px',
+                                    maxWidth: '150px',
+                                    px: 2,
+                                    py: 1,
+                                    width: { xs: '100%', sm: 'auto' }, // more room for text
+                                    whiteSpace: 'nowrap', // prevent wrapping if needed
+                                    overflow: 'hidden',
+                                    fontSize: { xs: '0.8rem', sm: '1.25rem' },
+                                    color: 'white',
+                                    fontWeight: 200,
+                                    fontFamily: 'Inter, sans-serif',
+                                    borderRadius: '10px',
+                                  }}
+                            >
+                                {label}
+                            </Button>
+                        ))}
                     </ButtonGroup>
+
 
                 </Box>
 
-                <Box sx={{ pl: 8, pr: 8, md: { ml: '3.5vw' } }}>
+                <Box sx={{ px: { xs: 2, sm: 8 }, ml: { md: '3.5vw' } }}>
                     <Grid container spacing={4} justifyContent="center">
                         {PROJECTS
                             .filter(project => type === 'all' || project.type === type)
                             .map((project, index) => (
-                                <Grid size={{ xs: 12, sm: 6, md: 4 }} direction="row"
+                                <Grid
+                                    item
+                                    xs={12}
+                                    sm={6}
+                                    md={4}
+                                    key={index}
                                     sx={{
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                    }} key={index}>
-                                    <Card sx={{ maxWidth: 600, height: '100%', backgroundColor: "inherit", color: 'inherit', border: '1px solid #cdcfd1', borderRadius: '6px' }}>
+                                        display: 'flex',
+                                        justifyContent: 'center',
+                                    }}
+                                >
+                                    <Card
+                                        sx={{
+                                            width: '100%',
+                                            maxWidth: 400,
+                                            height: '100%',
+                                            backgroundColor: 'inherit',
+                                            color: 'inherit',
+                                            border: '1px solid rgb(65, 67, 68)',
+                                            borderRadius: '6px',
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            justifyContent: 'space-between',
+                                        }}
+                                    >
                                         <CardMedia
                                             component="img"
                                             alt={project.title}
@@ -117,18 +118,27 @@ const Projects = () => {
                                             sx={{ objectFit: 'contain' }}
                                         />
                                         <CardContent>
-                                            <Typography gutterBottom variant="h5" component="div" sx={{
-                                                fontSize: '1.75rem',
-                                                fontWeight: 300,
-                                                fontFamily: 'Inter, sans-serif',
-                                            }}>
+                                            <Typography
+                                                gutterBottom
+                                                variant="h5"
+                                                component="div"
+                                                sx={{
+                                                    fontSize: '1.75rem',
+                                                    fontWeight: 300,
+                                                    fontFamily: 'Inter, sans-serif',
+                                                }}
+                                            >
                                                 {project.title}
                                             </Typography>
-                                            <Typography variant="body2" color="inherit" sx={{
-                                                fontSize: '1rem',
-                                                fontWeight: 100,
-                                                fontFamily: 'Inter, sans-serif',
-                                            }}>
+                                            <Typography
+                                                variant="body2"
+                                                color="inherit"
+                                                sx={{
+                                                    fontSize: '1rem',
+                                                    fontWeight: 100,
+                                                    fontFamily: 'Inter, sans-serif',
+                                                }}
+                                            >
                                                 {project.description}
                                             </Typography>
                                             {project.technologies.map((tech, index) => (
@@ -150,24 +160,45 @@ const Projects = () => {
                                                     {tech}
                                                 </Typography>
                                             ))}
-
                                         </CardContent>
                                         <CardActions sx={{ justifyContent: 'space-between' }}>
-                                            <IconButton sx={{
-                                                fontSize: '1rem',
-                                                fontWeight: 100,
-                                                fontFamily: 'Inter, sans-serif',
-                                                color: 'white',
-                                                '&:hover': { color: '#00bcd4' }
-                                            }}><GitHubIcon sx={{ fontSize: '1.2vw', mr: '0.25vw' }} /> <a href={project.git} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'white', }} >GitHub Repo</a>
+                                            <IconButton
+                                                sx={{
+                                                    fontSize: '1rem',
+                                                    fontWeight: 100,
+                                                    fontFamily: 'Inter, sans-serif',
+                                                    color: 'white',
+                                                    '&:hover': { color: '#00bcd4' },
+                                                }}
+                                            >
+                                                <GitHubIcon sx={{ fontSize: '1rem', mr: 1 }} />
+                                                <a
+                                                    href={project.git}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    style={{ textDecoration: 'none', color: 'white' }}
+                                                >
+                                                    GitHub Repo
+                                                </a>
                                             </IconButton>
-                                            <IconButton sx={{
-                                                fontSize: '1rem',
-                                                fontWeight: 100,
-                                                fontFamily: 'Inter, sans-serif',
-                                                color: 'white',
-                                                '&:hover': { color: '#00bcd4' }
-                                            }}><OpenInNewIcon sx={{ fontSize: '1.2vw', mr: '0.25vw' }} /> <a href={project.live} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'white', }} >Live</a>
+                                            <IconButton
+                                                sx={{
+                                                    fontSize: '1rem',
+                                                    fontWeight: 100,
+                                                    fontFamily: 'Inter, sans-serif',
+                                                    color: 'white',
+                                                    '&:hover': { color: '#00bcd4' },
+                                                }}
+                                            >
+                                                <OpenInNewIcon sx={{ fontSize: '1rem', mr: 1 }} />
+                                                <a
+                                                    href={project.live}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    style={{ textDecoration: 'none', color: 'white' }}
+                                                >
+                                                    Live
+                                                </a>
                                             </IconButton>
                                         </CardActions>
                                     </Card>
@@ -175,6 +206,7 @@ const Projects = () => {
                             ))}
                     </Grid>
                 </Box>
+
             </Box>
         </div>
     )

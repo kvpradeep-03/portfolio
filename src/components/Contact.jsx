@@ -27,10 +27,7 @@ const Contact = () => {
   return (
     <Box id="contact" sx={{ scrollMarginTop: '110px' }}>
       <Box sx={{ display: 'flex', justifyContent: 'center', mt: '8vw' }}>
-        <Typography component="div" variant='h1' sx={{
-          mb: '2rem',
-          fontSize: '2.25rem', fontFamily: 'Inter, sans-serif'
-        }}>
+        <Typography component="div" variant='h1' sx={{ fontSize: { xs: '1.75rem', sm: '3.75rem' }, fontWeight: { xs: 300, sm: 100 }, fontFamily: 'Inter, sans-serif', mt:'3rem', mb:'3rem' }}>
           Why You Should Hire Me?
         </Typography>
       </Box>
@@ -123,16 +120,37 @@ const Contact = () => {
           borderBottomWidth: '1px',      // line thickness
           width: '100%',                 // full width (or adjust as needed)
           mx: 'auto', 
-          mb: '2rem',                   // center if width is less than 100%
+          mb: '1rem',                   // center if width is less than 100%
           background: 'transparent',     // optional, ensures no background
         }}
       />
 
-      <Box sx={{ display: 'flex', justifyContent: 'center', }}>
-        <BiSolidQuoteSingleLeft />
-        <Typography sx={{ mb: '2rem',fontWeight:400, fontSize: '1.25rem', fontFamily: 'Inter, sans-serif' }}>Let’s turn bold ideas into brilliant solutions — together</Typography>
-        <BiSolidQuoteSingleRight />
-        </Box>
+      <Box
+        sx={{
+          px: { xs: 2, sm: 4 },
+          py: { xs: 4, sm: 4 },
+          textAlign: 'center',
+   
+        }}
+      >
+        <Typography
+          sx={{
+            display: 'flex',
+         
+            justifyContent: 'center',
+            alignItems: 'center',
+            fontSize: { xs: '1rem', sm: '2rem', md: '2.5rem' },
+            fontWeight: { xs: 300, sm: 100 },
+            fontFamily: 'Inter, sans-serif',
+            gap: 1,
+          }}
+        >
+           
+          Let’s turn bold ideas into brilliant solutions — together
+ 
+        </Typography>
+      </Box>
+
 
 
     </Box>

@@ -8,7 +8,7 @@ import { Box } from '@mui/material'
 import Techstack from './components/Techstack'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
- 
+import Beams from './animations/DecryptedText.jsx';
 
 function App() {
 

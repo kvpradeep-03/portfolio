@@ -14,81 +14,101 @@ import { motion } from "motion/react"
 import { animate, stagger } from "motion"
 import { splitText } from 'motion-plus'
 import { useEffect, useRef } from "react"
+import DecryptedText from '../animations/DecryptedText.jsx';
+ 
 
 const About = () => {
-  const containerRef = useRef(null)
 
-
-  useEffect(() => {
-    document.fonts.ready.then(() => {
-      if (!containerRef.current) return
-
-      // Hide the container until the fonts are loaded
-      containerRef.current.style.visibility = "visible"
-
-      const div = containerRef.current.querySelector("#about-text");
-      if (!div) return;
-
-      const { words } = splitText(div)
-
-      // Animate the words in the div
-      animate(
-        words,
-        { opacity: [0, 1], y: [10, 0] },
-        {
-          type: "spring",
-          duration: 5,
-          bounce: 1,
-          delay: stagger(0.10),
-        }
-      )
-    })
-  }, [])
   return (
-    <div id='about' ref={containerRef} style={{
-      padding: '20px 50px', margin: '40px auto', width: '80vw', scrollMarginTop: '100px' }}>
-      <Card sx={{ display: 'flex', justifyContent: 'center', bgcolor: 'inherit', color: 'inherit' }}>
-        <Box sx={{ display: 'flex', flexDirection: 'column', marginTop: '0px', alignItems: 'center' }}>
-          <CardContent sx={{ flex: '1 0 auto', padding: '100px 100px 50px 60px' }}>
-            <Typography component="div" variant='div' sx={{
-              mb: '2rem',
-              fontSize: '2.25rem',
-              fontFamily: 'Inter, sans-serif',
-              textDecoration: 'underline',
-              textDecorationThickness: '1.5px', // thinner underline
-              textDecorationColor: 'rgba(255,255,255,0.4)', // lighter color (adjust as needed)
-              textUnderlineOffset: '10px'
+    <div id='about'style={{scrollMarginTop: window.innerWidth < 600 ? '10rem' : '500px'}}>
+      <Box 
+        sx={{
+          padding: '20px 50px',
+          margin: '40px auto',
+          width: '80vw',
+          
+          marginTop: {
+            xs: '10rem',  // on mobile
+            sm: '40px'    // default for tablets and up
+          }
+        }}
+      >
+
+        <Card sx={{
+          display: 'flex',
+          flexDirection: { xs: 'column', sm: 'row' }, // 👈 key change
+          justifyContent: 'center',
+          bgcolor: 'inherit',
+          color: 'inherit',
+          width: '100%',
+        }}>
+          <Box sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            flexWrap: 'wrap',                           // Allow wrapping if needed
+            alignItems: 'center',
+            width: '100%',
+          }}>
+            <CardContent sx={{
+              flex: '1 0 auto',
+              padding: { xs: '24px 4px', sm: '100px 100px 50px 60px' }, // responsive padding
             }}>
-              Hi there <WavingHandIcon />
-            </Typography>
-            <Typography component="div" id='about-text' sx={{
-              fontWeight: 100,
-              fontSize: '1.125rem',
-              fontFamily: 'Inter, sans-serif'
-            }}>
-              {ABOUT_TEXT}
-            </Typography>
+              <Typography component="div" variant='div' sx={{
+                mb: '2rem',
+                fontSize: '2.25rem',
+                fontFamily: 'Inter, sans-serif',
+                textDecoration: 'underline',
+                textDecorationThickness: '1.5px', // thinner underline
+                textDecorationColor: 'rgba(255,255,255,0.4)', // lighter color (adjust as needed)
+                textUnderlineOffset: '10px'
+              }}>
+                Hi there <WavingHandIcon />
+              </Typography>
 
-            <motion.div
-              whileHover={{ scale: 0.98 }}
-              whileTap={{ scale: 1 }}
-            >
-              <Button variant="outlined" color="white" sx={{ color: 'white', '&:hover': { color: '#00bcd4' }, mt: '25px' }}>
-                Download Resume <DownloadIcon />
-              </Button>
-            </motion.div>
+              <Typography component="div" id='about-text' sx={{
+                fontWeight: 100,
+                fontSize: '1.125rem',
+                fontFamily: 'Inter, sans-serif',
+                whiteSpace: 'normal',          // ✅ allows wrapping
+                width: '100%',                 // ✅ ensure it fills available space
 
-          </CardContent>
-        </Box>
+              }}>
+                <DecryptedText
+                  text={ABOUT_TEXT}
+                  speed={100}
+                  maxIterations={20}
+                  animateOn="view"
+                  revealDirection="center"
+                />
+                
+              </Typography>
 
-        <CardMedia
-          component="img"
-          sx={{ width: 300, display: 'flex' }}
-          image={Profile}
-          alt="profile_pic"
-        />
-      </Card>
+              <motion.div
+                whileHover={{ scale: 0.98 }}
+                whileTap={{ scale: 1 }}
+              >
+                <Button variant="outlined" color="white" sx={{ color: 'white', '&:hover': { color: '#00bcd4' }, mt: '25px' }}>
+                  Download Resume <DownloadIcon />
+                </Button>
+              </motion.div>
+
+            </CardContent>
+          </Box>
+
+          <CardMedia
+            sx={{
+              width: { xs: '100%', sm: 300 }, // full width on mobile, fixed on desktop
+              objectFit: 'cover',             // optional for styling
+            }}
+            component="img"
+
+            image={Profile}
+            alt="profile_pic"
+          />
+        </Card>
+      </Box>
     </div>
+
   )
 }
 

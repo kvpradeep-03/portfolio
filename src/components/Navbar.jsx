@@ -38,20 +38,9 @@ const Navbar = () => {
     setAnchorEl(null);
   };
   return (
-
-    <motion.div
-
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{
-        duration: 0.8,
-        delay: 0.5,
-        ease: [0, 0.71, 0.2, 1.01],
-      }}
-    >
       <Nav sx={{
    
-        height: { xs: '10vw', sm: 'auto' },
+        height: { xs: '13vw', sm: 'auto' },
       }}>
         <FlashOnIcon sx={{ color: 'white', '&:hover': { color: '#00bcd4' }, marginLeft: '10px', fontSize: '1.75rem' }} />
         <Box
@@ -123,8 +112,6 @@ const Navbar = () => {
           <MenuItem onClick={handleClose}><a style={{ textDecoration: 'none', color: 'inherit' }} href="#contact">Contact Me</a></MenuItem>
         </Menu>
       </Nav>
-
-    </motion.div >
 
   )
 }
