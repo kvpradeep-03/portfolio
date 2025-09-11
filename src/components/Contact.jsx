@@ -14,6 +14,7 @@ import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import { BiSolidQuoteSingleLeft } from "react-icons/bi";
 import { BiSolidQuoteSingleRight } from "react-icons/bi";
 import { CONTACT } from '../constants';
+import AnimatedContent from '../animations/AnimatedContent';
 
 const Contact = () => {
   const HireMeLines = [
@@ -25,135 +26,146 @@ const Contact = () => {
     { icon: <TrendingUpIcon sx={{ mr: 1, color: 'white', '&:hover': { color: '#00bcd4' } }} />, text: "Always Improving: I treat every opportunity as a chance to grow not just as a developer, but as a communicator, thinker, and contributor to your business goals." },
   ];
   return (
-    <Box id="contact" sx={{ scrollMarginTop: '110px' }}>
-      <Box sx={{ display: 'flex', justifyContent: 'center', mt: '8vw' }}>
-        <Typography component="div" variant='h1' sx={{ fontSize: { xs: '1.75rem', sm: '3.75rem' }, fontWeight: { xs: 300, sm: 100 }, fontFamily: 'Inter, sans-serif', mt:'3rem', mb:'3rem' }}>
-          Why You Should Hire Me?
-        </Typography>
-      </Box>
-
-      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mb: '3rem', ml: '2vw', mr: '2vw', px: '2vw' }}>
-        {HireMeLines.map((item, idx) => (
-          <Box
-            key={idx}
-            sx={{
-              display: 'flex',
-              alignItems: 'flex-start',
-              mb: 2,
-              maxWidth: '900px',
-            }}
-          >
-            {item.icon}
-            <Typography sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 100, fontSize: '1.25rem' }}>
-              {item.text}
-            </Typography>
-          </Box>
-        ))}
-      </Box>
-
-      <Box sx={{ display: 'flex', justifyContent: 'center' }} >
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
-          <Typography
-            component="div"
-            variant="h1"
-            sx={{
-              fontSize: '2.25rem',
-              fontFamily: 'Inter, sans-serif',
-            }}
-          >
-            Contact Me
+    <AnimatedContent
+      distance={100}
+      direction="vertical"
+      reverse={false}
+      duration={0.8}
+      ease="power3.out"
+      initialOpacity={0.2}
+      animateOpacity
+      scale={1.1}
+      threshold={0.1}
+      delay={0}
+    >
+      <Box id="contact" sx={{ scrollMarginTop: '110px' }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', mt: '8vw' }}>
+          <Typography component="div" variant='h1' sx={{ fontSize: { xs: '1.75rem', sm: '3.75rem' }, fontWeight: { xs: 300, sm: 100 }, fontFamily: 'Inter, sans-serif', mt: '3rem', mb: '3rem' }}>
+            Why You Should Hire Me?
           </Typography>
-          <ConnectWithoutContactIcon fontSize="large" sx={{ ml: 1 }} />
         </Box>
-        
-      </Box>
-      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <ul style={{ listStyle: 'none' }}>
-          <li style={{marginBlock: 12}}>
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <NavigateNextIcon sx={{color: 'white', '&:hover': { color: '#00bcd4' }}} />
-              <Typography
-                component="p"
-                sx={{
-                  fontWeight: 100, fontSize: '1.25rem', fontFamily: 'Inter, sans-serif'
-                }}
-              >
-                Mail: {CONTACT.email}
-              </Typography>
-               
-            </Box>    
-          </li>
-          <li style={{ marginBlock: 12 }}>
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <NavigateNextIcon sx={{ color: 'white', '&:hover': { color: '#00bcd4' } }} />
-              <Typography
-                component="p"
-                sx={{
-                  fontWeight: 100, fontSize: '1.25rem', fontFamily: 'Inter, sans-serif'
-                }}
-              >
-                Phone: {CONTACT.phoneNo}
-              </Typography>
-            </Box>         
-          </li>
-          <li style={{ marginBlock: 12 }}>
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <NavigateNextIcon sx={{ color: 'white', '&:hover': { color: '#00bcd4' } }} />
-              <Typography
-                component="p"
-                sx={{
-                  fontWeight: 100, fontSize: '1.25rem', fontFamily: 'Inter, sans-serif'
-                }}
-              >
-                Location: {CONTACT.Location}
+
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mb: '3rem', ml: '2vw', mr: '2vw', px: '2vw' }}>
+          {HireMeLines.map((item, idx) => (
+            <Box
+              key={idx}
+              sx={{
+                display: 'flex',
+                alignItems: 'flex-start',
+                mb: 2,
+                maxWidth: '900px',
+              }}
+            >
+              {item.icon}
+              <Typography sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 100, fontSize: '1.25rem' }}>
+                {item.text}
               </Typography>
             </Box>
-            
-          </li>         
-        </ul>
+          ))}
+        </Box>
 
-      </Box>
+        <Box sx={{ display: 'flex', justifyContent: 'center' }} >
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <Typography
+              component="div"
+              variant="h1"
+              sx={{
+                fontSize: '2.25rem',
+                fontFamily: 'Inter, sans-serif',
+              }}
+            >
+              Contact Me
+            </Typography>
+            <ConnectWithoutContactIcon fontSize="large" sx={{ ml: 1 }} />
+          </Box>
 
-      <Divider
-        sx={{
-          borderColor: '#ffffff66',      // line color (semi-transparent white)
-          borderBottomWidth: '1px',      // line thickness
-          width: '100%',                 // full width (or adjust as needed)
-          mx: 'auto', 
-          mb: '1rem',                   // center if width is less than 100%
-          background: 'transparent',     // optional, ensures no background
-        }}
-      />
+        </Box>
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <ul style={{ listStyle: 'none' }}>
+            <li style={{ marginBlock: 12 }}>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <NavigateNextIcon sx={{ color: 'white', '&:hover': { color: '#00bcd4' } }} />
+                <Typography
+                  component="p"
+                  sx={{
+                    fontWeight: 100, fontSize: '1.25rem', fontFamily: 'Inter, sans-serif'
+                  }}
+                >
+                  Mail: {CONTACT.email}
+                </Typography>
 
-      <Box
-        sx={{
-          px: { xs: 2, sm: 4 },
-          py: { xs: 4, sm: 4 },
-          textAlign: 'center',
-   
-        }}
-      >
-        <Typography
+              </Box>
+            </li>
+            <li style={{ marginBlock: 12 }}>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <NavigateNextIcon sx={{ color: 'white', '&:hover': { color: '#00bcd4' } }} />
+                <Typography
+                  component="p"
+                  sx={{
+                    fontWeight: 100, fontSize: '1.25rem', fontFamily: 'Inter, sans-serif'
+                  }}
+                >
+                  Phone: {CONTACT.phoneNo}
+                </Typography>
+              </Box>
+            </li>
+            <li style={{ marginBlock: 12 }}>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <NavigateNextIcon sx={{ color: 'white', '&:hover': { color: '#00bcd4' } }} />
+                <Typography
+                  component="p"
+                  sx={{
+                    fontWeight: 100, fontSize: '1.25rem', fontFamily: 'Inter, sans-serif'
+                  }}
+                >
+                  Location: {CONTACT.Location}
+                </Typography>
+              </Box>
+
+            </li>
+          </ul>
+
+        </Box>
+
+        <Divider
           sx={{
-            display: 'flex',
-         
-            justifyContent: 'center',
-            alignItems: 'center',
-            fontSize: { xs: '1rem', sm: '2rem', md: '2.5rem' },
-            fontWeight: { xs: 300, sm: 100 },
-            fontFamily: 'Inter, sans-serif',
-            gap: 1,
+            borderColor: '#ffffff66',      // line color (semi-transparent white)
+            borderBottomWidth: '1px',      // line thickness
+            width: '100%',                 // full width (or adjust as needed)
+            mx: 'auto',
+            mb: '1rem',                   // center if width is less than 100%
+            background: 'transparent',     // optional, ensures no background
+          }}
+        />
+
+        <Box
+          sx={{
+            px: { xs: 2, sm: 4 },
+            py: { xs: 4, sm: 4 },
+            textAlign: 'center',
+
           }}
         >
-           
-          Let’s turn bold ideas into brilliant solutions — together
- 
-        </Typography>
+          <Typography
+            sx={{
+              display: 'flex',
+
+              justifyContent: 'center',
+              alignItems: 'center',
+              fontSize: { xs: '1rem', sm: '2rem', md: '2.5rem' },
+              fontWeight: { xs: 300, sm: 100 },
+              fontFamily: 'Inter, sans-serif',
+              gap: 1,
+            }}
+          >
+
+            Let’s turn bold ideas into brilliant solutions — together
+
+          </Typography>
+        </Box>
       </Box>
+    </AnimatedContent>
 
-
-
-    </Box>
   )
 }
 

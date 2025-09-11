@@ -21,6 +21,7 @@ import { SiAdminer } from "react-icons/si";
 import styled from '@emotion/styled';
 import * as motion from "motion/react-client";
 import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
+import AnimatedContent from '../animations/AnimatedContent';
 
 const Icon = styled(Box)({
     display: 'flex',
@@ -51,21 +52,33 @@ const Icon = styled(Box)({
 
 const Techstack = () => {
     return (
- 
-        <Box id="skill" sx={{ scrollMarginTop: '200px' }}>
-            <Box sx={{ display: 'flex', justifyContent: 'space-around', mt: '15vw', mb: { xs: '4rem', sm: '6rem' }, }}>
+
+        <AnimatedContent
+            distance={100}
+            direction="vertical"
+            reverse={false}
+            duration={0.8}
+            ease="power3.out"
+            initialOpacity={0.2}
+            animateOpacity
+            scale={1.1}
+            threshold={0.1}
+            delay={0}
+        >
+            <Box id="skill" sx={{ scrollMarginTop: '200px' }}>
+                <Box sx={{ display: 'flex', justifyContent: 'space-around', mt: '15vw', mb: { xs: '4rem', sm: '6rem' }, }}>
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                         <Typography
                             component="div"
                             variant="h1"
-                        sx={{ fontSize: { xs: '1.75rem', sm: '3.75rem' }, fontWeight: { xs: 300, sm: 100 }, fontFamily: 'Inter, sans-serif' }}
+                            sx={{ fontSize: { xs: '1.75rem', sm: '3.75rem' }, fontWeight: { xs: 300, sm: 100 }, fontFamily: 'Inter, sans-serif' }}
                         >
                             Technologies I Work With
                         </Typography>
-                        <TipsAndUpdatesIcon fontSize="large" sx={{ ml: {xs:1, sm:2}}} />
+                        <TipsAndUpdatesIcon fontSize="large" sx={{ ml: { xs: 1, sm: 2 } }} />
                     </Box>
                 </Box>
-                <Box id="icons-container" sx={{ display: 'flex', flexGrow: 1, justifyContent: 'center', p:2 }}>
+                <Box id="icons-container" sx={{ display: 'flex', flexGrow: 1, justifyContent: 'center', p: 2 }}>
                     <Grid container spacing={3} justifyContent="center" alignItems="center">
                         <Grid size={2}>
                             <motion.div
@@ -454,7 +467,9 @@ const Techstack = () => {
                     </Grid>
                 </Box>
             </Box>
- 
+        </AnimatedContent>
+
+
     )
 }
 
