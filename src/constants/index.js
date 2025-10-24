@@ -29,7 +29,7 @@ export const PROJECTS = [
     git: "https://github.com/kvpradeep-03/Urbancart",
     live: "Development in Progress",
     description:
-      "Developed a full-stack e-commerce web app using React and Django REST API, featuring a responsive UI and efficient product management for seamless user experience.\nNOTE: `Development in progress`",
+      "Developed a full-stack e-commerce web app using React and Django REST API, featuring a responsive UI and efficient product management for seamless user experience.\nNOTE: This Project is still under Development, You can check the codebase in the GitHub repository.",
     technologies: ["React", "Python", "DjangoRestFramework", "MySQL"],
   },
   {
@@ -69,7 +69,7 @@ export const PROJECTS = [
     git: "https://github.com/kvpradeep-03/MoviesHub",
     live: "https://appmovieshub.netlify.app/",
     description:
-      "Movieshub is a movie listing web app that fetches real-time data using the TMDB API.\nNOTE: `Use Chrome For better compatability`",
+      "Movieshub is a movie listing web app that fetches real-time data using the TMDB API.\nNOTE: Use Chrome For better compatability",
     technologies: ["HTML", "CSS", "React", "Material UI", "OpenTDB API"],
   },
 ];
