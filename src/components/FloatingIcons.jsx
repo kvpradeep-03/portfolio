@@ -67,7 +67,7 @@ const FloatingIcons = () => {
             }}
 
         >
-            <Icons className={`icons ${hideIcons ? 'hide' : 'show'}`}>
+            <Icons className={`${hideIcons ? 'hide' : 'show'}`}>
                 <a
                     href="https://github.com/kvpradeep-03"
                     target="_blank"

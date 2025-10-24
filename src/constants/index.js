@@ -3,6 +3,7 @@ import pixvaltImg from '../assets/projects/pixvalt.png';
 import movieshubImg from '../assets/projects/movieshub.png';
 import fusioncartImg from '../assets/projects/fusioncart.png';
 import usermanagementapiImg from '../assets/projects/usermanagementapi.png';
+import urbancartImg from '../assets/projects/urbancart.png';
 
 
 export const HERO_CONTENT = `I architect scalable backends and engineer responsive frontends, optimizing every layer of the stack.`;
@@ -14,7 +15,7 @@ export const PROJECTS = [
   {
     title: "Eato",
     image: eatoImg,
-    type: 'frontend',
+    type: "frontend",
     git: "https://github.com/kvpradeep-03/Eato",
     live: "https://eatoapp.netlify.app/",
     description:
@@ -22,9 +23,29 @@ export const PROJECTS = [
     technologies: ["HTML", "CSS", "React", "Material UI"],
   },
   {
+    title: "UrbanCart",
+    image: urbancartImg,
+    type: "fullstack",
+    git: "https://github.com/kvpradeep-03/Urbancart",
+    live: "Development in Progress",
+    description:
+      "Developed a full-stack e-commerce web app using React and Django REST API, featuring a responsive UI and efficient product management for seamless user experience.\nNOTE: `Development in progress`",
+    technologies: ["React", "Python", "DjangoRestFramework", "MySQL"],
+  },
+  {
+    title: "User-Management Api",
+    image: usermanagementapiImg,
+    type: "api",
+    git: "https://github.com/kvpradeep-03/user-management-API",
+    live: "https://github.com/kvpradeep-03/user-management-API/wiki/user%E2%80%90management-API-Docs",
+    description:
+      "FusionCart is a front-end e-commerce web app featuring product listings, cart functionality with browser local storage, and a smooth checkout flow",
+    technologies: ["Php", "Postman", " RESTful API"],
+  },
+  {
     title: "PixValt",
     image: pixvaltImg,
-    type: 'frontend',
+    type: "frontend",
     git: "https://github.com/kvpradeep-03/PixValt",
     live: "https://pixvaltapp.netlify.app/",
     description:
@@ -32,34 +53,24 @@ export const PROJECTS = [
     technologies: ["HTML", "CSS", "React", "Material UI"],
   },
   {
+    title: "FusionCart",
+    image: fusioncartImg,
+    type: "frontend",
+    git: "https://github.com/kvpradeep-03/E-COMMERCE-webpage",
+    live: "https://fusioncart.netlify.app/",
+    description:
+      "FusionCart is a front-end e-commerce web app featuring product listings, cart functionality with browser local storage, and a smooth checkout flow",
+    technologies: ["HTML", "CSS", "Bootstrap", "Javascript"],
+  },
+  {
     title: "MoviesHub",
     image: movieshubImg,
-    type: 'frontend',
+    type: "frontend",
     git: "https://github.com/kvpradeep-03/MoviesHub",
     live: "https://appmovieshub.netlify.app/",
     description:
       "Movieshub is a movie listing web app that fetches real-time data using the TMDB API.\nNOTE: `Use Chrome For better compatability`",
     technologies: ["HTML", "CSS", "React", "Material UI", "OpenTDB API"],
-  },
-  {
-    title: "FusionCart",
-    image: fusioncartImg,
-    type: 'frontend',
-    git: "https://github.com/kvpradeep-03/E-COMMERCE-webpage",
-    live: "https://fusioncart.netlify.app/",
-    description:
-      "FusionCart is a front-end e-commerce web app featuring product listings, cart functionality with browser local storage, and a smooth checkout flow",
-    technologies: ["HTML", "CSS","Bootstrap", "Javascript"],
-  },
-  {
-    title: "User-Management Api",
-    image: usermanagementapiImg,
-    type: 'api',
-    git: "https://github.com/kvpradeep-03/user-management-API",
-    live: "https://github.com/kvpradeep-03/user-management-API/wiki/user%E2%80%90management-API-Docs",
-    description:
-      "FusionCart is a front-end e-commerce web app featuring product listings, cart functionality with browser local storage, and a smooth checkout flow",
-    technologies: ["Php", "Postman", " RESTful API"],
   },
 ];
 
